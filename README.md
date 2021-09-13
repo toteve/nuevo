@@ -1,2 +1,2 @@
-# landing-page-ft
-Sitio con Nodejs para una LandingPage
+# Screenshot
+![](docs/screenshot.png)
