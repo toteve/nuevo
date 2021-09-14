@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page Principal</title>
+  <!-- enlazar con BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <!-- enlazar con FONT AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!-- enlazar con personalizado CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <!-- NAVIGATION con colores oscuros de texto y fondo, con expand ocupa todo el ancho de pantalla -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Se define una clase Container en un DIV, PARA centrar la navegacion -->
+    <div class="container">
+      <!-- Se define el Brand, asi como que imagen contendra la Etiqueta a -->
+      <a class="navbar-brand" href="/">
+        <!-- la imagen ocupara un 20% del ancho de navegacion -->
+        <img src="img/logoft.png" style="width: 20%;">
+      </a>
+      <!-- Este Button permitira colapsar los elementos de NAVIGATION para el responsive Menu Hamburguesa -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Div que contendra los elementos de NAVIGATION -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- UL que contiene los elementos LI y como se ajustan automaticos los elementos de NAVIGATION, 
+               margin left auto -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Un LI para cada elemento del menu de Navegation, tipo enlace nav-link y no enlazan con nada -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Equipo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contactanos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER principal, la definicion completa de todo lo que contendra el encabezado -->
+  <!-- HEADER principal, sus clases main-header y background-overlay se usan en MAIN.CSS para
+         definir imagen y estilos del background del Header -->
+  <header class="main-header">
+    <div class="background-overlay text-white py-5">
+      <!-- Se define una clase Container en un DIV, PARA todo el Header -->
+      <div class="container">
+        <!-- Este DIV TIENE la clase Row de BS4 para el Header, y display flex para ajustarse -->
+        <div class="row d-flex h-100">
+          <!-- Este DIV define la cantidad de columnas (6) a usar por textos del header, definido que en
+                 pantallas pequeñas todo se centra -->
+          <div class="col-sm-6 text-center justify-content-center align-self-center">
+            <h1>
+              Este es un titulo o frase de este Libro
+            </h1>
+            <p>Toda la supuesta fantasia de ASIMOV en su epoca, ahora es una realidad plena y avanzando.</p>
+            <!-- Etiqueta a con clase boton outline, grande y texto blanco  -->
+            <a href="#" class="btn btn-outline-secondary btn-lg text-white">
+              Leer mas...
+            </a>
+          </div>
+          <!-- Este DIV define la cantidad siguiente de columnas (6) a usar por imagen del header, 
+                 definido que en pantallas pequeñas con fluid para ajustarse y ocupando todo el espacio -->
+          <div class="col-sm-6">
+            <img src="img/product.jpg" class="img-fluid d-none d-sm-block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- NEWSLETTER  -->
+  <!-- Section con ID que se usa en Main.css para definir estilos -->
+  <section id="newsletter" class="bg-dark text-white py-5">
+    <!-- Se define una clase Container en un DIV, PARA todo el Newsletter -->
+    <div class="container">
+      <!-- Este DIV TIENE la clase Row de BS4 para el Newsletter -->
+      <div class="row">
+        <!-- Este DIV define la cantidad de columnas (4) a usar por cada bloque del
+               container que seran 3, este es bloque 1, contiene un Input tipo Text -->
+        <div class="col-md-4">
+          <input type="text" class="form-control form-control-lg" placeholder="Ingrese Nombre">
+        </div>
+        <!-- Este DIV define la cantidad de columnas (4) a usar por cada bloque del
+               container que seran 3, este es bloque 2, contiene un Input tipo Email  -->
+        <div class="col-md-4">
+          <input type="email" class="form-control form-control-lg" placeholder="Ingrese Email">
+        </div>
+        <!-- Este DIV define la cantidad de columnas (4) a usar por cada bloque del
+               container que seran 3, este es bloque 3, contiene un boton de Suscribir -->
+        <div class="col-md-4">
+          <button class="btn btn-primary btn-lg btn-block">
+            Suscribir
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- FEATURES -->
+  <!-- Section con 4 bloques, uno para cada caracteristica -->
+  <section class="py-5">
+    <!-- Se define una clase Container en un DIV, PARA todo lo de Features -->
+    <div class="container">
+      <!-- Este DIV TIENE la clase Row de BS4 para el Feature con 4 bloques  -->
+      <div class="row">
+
+        <!-- Este DIV define la cantidad de columnas (3) a usar por cada bloque del
+               container que seran 4, este es bloque 1, contiene un Card y Card Body -->
+        <div class="col-md-3">
+          <!-- Este DIV define text del Card centrado y con borde primario, el alto dependera la 
+                 cantidad de texto en h3 y p  -->
+          <div class="card text-center border-primary">
+            <div class="card-body">
+              <h3>1era Caracteristica</h3>
+              <p>
+                Quedara permanente sujeto al relato de Asimov?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Este DIV define la cantidad de columnas (3) a usar por cada bloque del
+               container que seran 4, este es bloque 2, contiene un Card y Card Body -->
+        <div class="col-md-3">
+          <!-- Este DIV define text del Card por defecto a izqda y con fondo azul, sin borde
+                 el alto dependera la cantidad de texto en h3 y p   -->
+          <div class="card text-white bg-primary">
+            <div class="card-body">
+              <h3>2da Caracteristica</h3>
+              <p>
+                Lo narrado en la inventiva de ASIMOV sera el futuro?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Este DIV define la cantidad de columnas (3) a usar por cada bloque del
+               container que seran 4, este es bloque 3, contiene un Card y Card Body -->
+        <div class="col-md-3">
+          <!-- Este DIV define text del Card centrado y con borde primario, el alto dependera la 
+                 cantidad de texto en h3 y p   -->
+          <div class="card text-center border-primary">
+            <div class="card-body">
+              <h3>3era Caracteristica</h3>
+              <p>
+                Segun la narrativa el futuro es todo lo imaginable
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Este DIV define la cantidad de columnas (3) a usar por cada bloque del
+               container que seran 4, este es bloque 4, contiene un Card y Card Body -->
+        <div class="col-md-3">
+          <!-- Este DIV define text del Card por defecto a izqda y con fondo azul, sin borde
+                 el alto dependera la cantidad de texto en h3 y p   -->
+          <div class="card text-white bg-primary">
+            <div class="card-body">
+              <h3>4ta Caracteristica</h3>
+              <p>
+                Lo que vendra, nos sorprendera a todos?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ABOUT -->
+  <!-- Section con un solo bloque para todo el ABOUT, texto centrado y color ligero -->
+  <section class="m5 text-center bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="m-5">
+          <h3>Por que este libro?</h3>
+          <p>
+            Este libro se corresponde con todo lo que promete, la gran capacidad narrativa
+            de Asimov, los fascinara y llevara a ubicarlos en ese futuro que nos describe
+            de tal forma, que no seran defraudados por su compra?
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCORDION -->
+  <!-- Section con un solo bloque centrado el texto y padding 5 -->
+  <section class="container text-center p-5">
+    <h1>Preguntas Frecuentes</h1>
+    <!-- Este DIV TIENE la clase Row de BS4 para el ACORDION con 3 bloques NO EN LINEA -->
+    <div class="row">
+      <!-- Este DIV TIENE la clase accordion y un ID referenciado desde main.css para estilos
+             y una clase card para cada seccion del acordeon -->
+      <div class="accordion" id="accordionExample">
+
+        <!-- Este DIV TIENE la clase Card una para cada parte del acordeon, Parte 1 -->
+        <div class="card">
+          <!-- Este DIV TIENE la clase card-header, asi como Id que sera relacionado por otros bloques -->
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <!-- Este button tipo enlace permite definir colapsable para reduccion de pantalla -->
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Preguntas Uno
+              </button>
+            </h5>
+          </div>
+          <!-- Este Div colapsable, relacionado a headingOne y al #accordionexample Id del Accordion
+                 dentro de esta clase Card -->
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              La empresa que se encarga del envio de las compras de ebook, tarda mucho tiempo en responder?
+              Por lo normal una vez realizada la compra y solicitud del ebook, en pocos minutos una vez se
+              confirme la transaccion segun la pasarela de pago, el proveedor del ebook enviara al correo del
+              cliente indicado al momento de la compra de un enlace directo al servidor de descarga del proveedor
+              de tal forma que asi el cliente podra descargar la version pagada del ebook, de esta forma garantia
+              que ustedes tendran acceso inmediato al producto adquirido
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Este DIV TIENE la clase Card una para cada parte del acordeon, Parte 2 -->
+        <div class="card">
+          <!-- Este DIV TIENE la clase card-header, asi como Id que sera relacionado por otros bloques -->
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <!-- Este button tipo enlace permite definir colapsable para reduccion de pantalla -->
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                Pregunta Dos
+              </button>
+            </h5>
+          </div>
+
+          <!-- Este Div colapsable, relacionado a headingTwo y al #accordionexample Id del Accordion
+                 dentro de esta clase Card -->
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              La empresa que se encarga del envio de las compras de ebook, tarda mucho tiempo en responder?
+              Por lo normal una vez realizada la compra y solicitud del ebook, en pocos minutos una vez se
+              confirme la transaccion segun la pasarela de pago, el proveedor del ebook enviara al correo del
+              cliente indicado al momento de la compra de un enlace directo al servidor de descarga del proveedor
+              de tal forma que asi el cliente podra descargar la version pagada del ebook, de esta forma garantia
+              que ustedes tendran acceso inmediato al producto adquirido
+            </div>
+          </div>
+        </div>
+
+        <!-- Este DIV TIENE la clase Card una para cada parte del acordeon, Parte 3 -->
+        <div class="card">
+          <!-- Este DIV TIENE la clase card-header, asi como Id que sera relacionado por otros bloques -->
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <!-- Este button tipo enlace permite definir colapsable para reduccion de pantalla -->
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                Pregunta Tres
+              </button>
+            </h5>
+          </div>
+
+          <!-- Este Div colapsable, relacionado a headingThree y al #accordionexample Id del Accordion
+                 dentro de esta clase Card -->
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              La empresa que se encarga del envio de las compras de ebook, tarda mucho tiempo en responder?
+              Por lo normal una vez realizada la compra y solicitud del ebook, en pocos minutos una vez se
+              confirme la transaccion segun la pasarela de pago, el proveedor del ebook enviara al correo del
+              cliente indicado al momento de la compra de un enlace directo al servidor de descarga del proveedor
+              de tal forma que asi el cliente podra descargar la version pagada del ebook, de esta forma garantia
+              que ustedes tendran acceso inmediato al producto adquirido
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- TEAM -->
+  <!-- Section con un solo bloque centrado el texto para el TEAM -->
+  <section class="text-center team">
+    <!-- DIV pricipal con clase container con un solo bloque para el TEAM -->
+    <div class="container p-5">
+      <h1 class="text-center text-white">Equipo</h1>
+      <p class="text-white">
+        Es un placer para nosotros presentar al equipo responsable de todas las ventas
+        por cada uno de los diferentes canales de ventas que manejanmos para todas las 
+        obras de nuestros escritores como ASIMOV
+      </p>
+      
+      <!-- Este DIV TIENE la clase Row de BS4 con 4 bloques para usuarios del TEAM -->
+      <div class="row">
+        
+        <!-- USER TEAM bloque 1-->
+        <div class="col-lg-3">
+          <!-- USER TEAM bloque 1 con su clase Card-->
+          <div class="card">
+            <div class="card-body">
+              <!-- Cargar Imagen y darle ajuste y forma circular -->
+              <img src="img/person.png" class="img-fluid rounded-circle w-50">
+              <h3>Joshua Totesaut</h3>
+              <p>
+                Gerente de Ecommerce
+              </p>
+              <!-- Cargar iconos de Redes Sociales -->
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- USER TEAM bloque 2 -->
+        <div class="col-lg-3">
+          <!-- USER TEAM bloque 2 con su clase Card-->
+          <div class="card">
+            <div class="card-body">
+              <!-- Cargar Imagen y darle ajuste y forma circular -->
+              <img src="img/person.png" class="img-fluid rounded-circle w-50">
+              <h3>Nancy Cristina Ortiz</h3>
+              <p>
+                Gerente de Canales Retail
+              </p>
+              <!-- Cargar iconos de Redes Sociales -->
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- USER TEAM bloque 3 -->
+        <div class="col-lg-3">
+          <!-- USER TEAM bloque 3 con su clase Card-->
+          <div class="card">
+            <div class="card-body">
+              <!-- Cargar Imagen y darle ajuste y forma circular -->
+              <img src="img/person.png" class="img-fluid rounded-circle w-50">
+              <h3>Fabiola Crismar Morillo</h3>
+              <p>
+                Gerente de Omnicanalidad
+              </p>
+              <!-- Cargar iconos de Redes Sociales -->
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- USER TEAM bloque 4 -->
+        <div class="col-lg-3">
+          <!-- USER TEAM bloque 4 con su clase Card-->
+          <div class="card">
+            <div class="card-body">
+              <!-- Cargar Imagen y darle ajuste y forma circular -->
+              <img src="img/person.png" class="img-fluid rounded-circle w-50">
+              <h3>Francisco Totesaut</h3>
+              <p>
+                Gerente de Tecnologia
+              </p>
+              <!-- Cargar iconos de Redes Sociales -->
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- CONTACT -->
+  <!-- Section con un solo bloque colores ligeros para Contact -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Este DIV define la cantidad de columnas (9) a usar por este bloque del
+               container que contendra el Formulario -->
+        <div class="col-lg-9">
+          <h3>Contactanos</h3>
+          <p>
+            Contactanos para cualquier duda
+          </p>
+          <!-- Form action con los Input Group por cada campo del formulario -->
+          <form action="">
+            <!-- 1er Input Group para Nombre -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <!-- Definir icono de Font Awesome a usar en 1er Input Group Username -->
+                <i class="fas fa-user input-group-text"></i>
+              </div>
+              <input type="text" class="form-control" placeholder="Nombre" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+            
+            <!-- 2do Input Group para Nombre -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <!-- Definir icono de Font Awesome a usar en 2do Input Group Username -->
+                <i class="fas fa-envelope input-group-text"></i>
+              </div>
+              <input type="text" class="form-control" placeholder="Correo" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+
+            <!-- 3er Input Group para Nombre -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <!-- Definir icono de Font Awesome a usar en 3er Input Group Username -->
+                <i class="fas fa-pencil-alt input-group-text"></i>
+              </div>
+              <textarea name="" cols="30" rows="10" placeholder="Mensaje" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Enviar formulario</button>
+
+          </form>
+        </div>
+
+        <!-- Este DIV define la cantidad de columnas (3) a usar por este bloque del
+               container que contendra la Imagen -->
+        <div class="col-lg-3 align-self-center">
+          <img src="img/logoft.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container p-3">
+      <div class="row text-center text-white">
+        <div class="col ml-auto">
+          <p>Copyright &copy; 2021</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOTSTRAP SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
